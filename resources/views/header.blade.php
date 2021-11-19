@@ -25,6 +25,9 @@
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
                             @if(Auth::check())
                                 <a href="#"style="margin-left: 40px;">Hi, &nbsp;{{Auth::user()->name}}</a>
+                                @if(Auth::user()->admin==1)                          
+                                   <a href="{{route('admin')}}" style="margin-left: 40px;"><i style="font-size: 16px;">ADMIN</i></a>
+                            @endif
                                 <a href="{{route('dangxuat')}}" style="margin-left: 20px;">Đăng xuất</a>
                             @else
                              <a href="{{route('dangnhap')}}" style="margin-left: 40px;"><i style="font-size: 16px;">Đăng nhập</i></a>
@@ -68,7 +71,7 @@
                     <div class="collapse navbar-collapse justify-content-md-center" id="Forest Timemenu">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link color-green-hover" href="garden-index.html">Trang chủ</a>
+                                <a class="nav-link color-green-hover" href="{{route('trangchu')}}">Trang chủ</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link color-green-hover" href="{{route('Reviewchuyendi')}}" >Review những chuyến đi</a>

@@ -8,6 +8,7 @@ class DetailController extends Controller
 {
     public function getDetail(Request $request){
         $detail = status::where('id', $request->id)->first();
-        return view('page.Detail', compact('detail'));
+        return view('page.Detail',compact('detail'));
 
-    }}
+    }
+}
