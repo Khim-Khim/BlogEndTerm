@@ -1,11 +1,11 @@
 
-    <div id="wrapper">
+     <div id="wrapper">
         <div class="collapse top-search" id="collapseExample">
             <div class="card card-block">
                 <div class="newsletter-widget text-center">
                     <form class="form-inline">
                         <input type="text" class="form-control" placeholder="What you are looking for?">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        <button type="submit" class="btn btn-primary" style=" width:50px; height: 50px; border: 0px none"><i class="fa fa-search"></i></button>
                     </form>
                 </div><!-- end newsletter -->
             </div>

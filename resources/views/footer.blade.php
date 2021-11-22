@@ -5,7 +5,7 @@
                         <div class="widget">
                             <div class="footer-text text-center">
                                 <a href="index.html"><img src="fontend/images/version/garden-footer-logo.png" alt="" class="img-fluid"></a>
-                                <p>Forest Time is a personal blog for handcrafted, cameramade photography content, fashion styles from independent creatives around the world.</p>
+                                <p>Với mong muốn trở thành kênh blog để lưu giữ, chia sẻ lại hành trình du lịch của các bạn, TravelGo sẽ luôn là kênh blog mà trước mỗi cuỗ hành trình nó sẽ luôn là cuốn cẩm nang chân thực và hiệu quả nhất giúp mọi người có thể tận hưởng, trải nghiệm chuyến du lịch tuyệt vời của mình</p>
                                 <div class="social">
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>              
                                     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
@@ -31,7 +31,7 @@
                     <div class="col-md-12 text-center">
                         <br>
                         <br>
-                        <div class="copyright">&copy; Forest Time. Design: <a href="http://html.design">HTML Design</a>.</div>
+                        
                     </div>
                 </div>
             </div><!-- end container -->

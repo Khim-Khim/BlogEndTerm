@@ -17,7 +17,7 @@
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
-                                            <a href="garden-single.html" title="">
+                                            <a href="{{route('chitiet',$hot->id)}}" title="">
                                           {{-- image --}}      <img src="fontend/images/image/{{$hot->image}}" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
@@ -107,7 +107,7 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="Search on the site">
                                     </div>
-                                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                                    <button type="submit" class="btn btn-primary" style=" margin-right: 16px;"><i class="fa fa-search"></i></button>
                                 </form>
                             </div><!-- end widget -->
 
