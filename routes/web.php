@@ -86,3 +86,9 @@ Route::get('quan-li-bai-viet',[
     'uses'=>'ManagerUserController@getPage'
 
 ]);
+Route::get('them-bai-viet',[
+    'as'=>'thembaiviet',
+    'uses'=>'ManagerUserController@getAddPage'
+
+]);
+Route::post('/uploads-ckeditor','ManagerUserController@ckeditor_image');

@@ -54,5 +54,45 @@
 </div>
 </div>
 <div class="dmtop">Scroll to Top</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><a href="{{route('thembaiviet')}}" title="">Thêm bài viết</a></button>
 
+<style>
+
+#myBtn {
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: ;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 20px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+</script>
 @endsection
