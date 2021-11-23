@@ -30,7 +30,7 @@
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
-                                             <a href="{{route('chitiet',$tips->id)}}" title="">
+                                             <a href="{{route('chitiet',$tips->id_status)}}" title="">
                                                 <img src="fontend/images/image/{{$tips->image}}" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>

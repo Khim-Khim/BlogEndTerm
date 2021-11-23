@@ -17,7 +17,7 @@
                                 <div class="blog-box row">
                                     <div class="col-md-4">
                                         <div class="post-media">
-                                            <a href="{{route('chitiet',$hot->id)}}" title="">
+                                            <a href="{{route('chitiet',$hot->id_status)}}" title="">
                                           {{-- image --}}      <img src="fontend/images/image/{{$hot->image}}" alt="" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>

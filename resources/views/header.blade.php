@@ -18,16 +18,12 @@
                         <div class="topsocial">
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest"><i class="fa fa-pinterest"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Flickr"><i class="fa fa-flickr"></i></a>
+                           
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
                             @if(Auth::check())
                                 <a href="#"style="margin-left: 40px;">Hi, &nbsp;{{Auth::user()->name}}</a>
-                                @if(Auth::user()->admin==1)                          
-                                   <a href="{{route('admin')}}" style="margin-left: 40px;"><i style="font-size: 16px;">ADMIN</i></a>
-                            @endif
+                                 <a href="{{route('quanli')}}"style="margin-left: 40px;">bài viết cá nhân</a>
                                 <a href="{{route('dangxuat')}}" style="margin-left: 20px;">Đăng xuất</a>
                             @else
                              <a href="{{route('dangnhap')}}" style="margin-left: 40px;"><i style="font-size: 16px;">Đăng nhập</i></a>
@@ -85,9 +81,11 @@
                             <li class="nav-item">
                                 <a class="nav-link color-green-hover" href="{{route('tiptravel')}}">Mẹo du lịch</a>
                             </li>
+                             @if(Auth::check())
                             <li class="nav-item">
                                 <a class="nav-link color-green-hover" href="{{route('lienhe')}}">bạn đã theo dõi</a>
-                            </li>  
+                            </li>
+                            @endif  
                             <li class="nav-item">
                                 <a class="nav-link color-green-hover" href="{{route('lienhe')}}">Liên hệ</a>
                             </li>

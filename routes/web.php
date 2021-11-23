@@ -75,4 +75,14 @@ Route::get('chi-tiet/{id}',[
     'uses'=>'DetailController@getDetail'
 
 ]);
+//user
+Route::get('up-bai',[
+    'as'=>'trangupbai',
+    'uses'=>'UpstoryController@getForm'
 
+]);
+Route::get('quan-li-bai-viet',[
+    'as'=>'quanli',
+    'uses'=>'ManagerUserController@getPage'
+
+]);

@@ -7,7 +7,7 @@ use App\status;
 class DetailController extends Controller
 {
     public function getDetail(Request $request){
-        $detail = status::where('id', $request->id)->first();
+        $detail = status::where('id_status', $request->id)->first();
         return view('page.Detail',compact('detail'));
 
     }

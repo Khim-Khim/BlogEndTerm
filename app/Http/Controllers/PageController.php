@@ -10,7 +10,7 @@ class PageController extends Controller
 {
     public function getIndex(){
 
-        $hotstatus = status::where('hot',1)->leftjoin('users','status.user_id','=','users.id_u')->paginate(7);
+        $hotstatus = status::where('hot',1)->rightjoin('users','status.user_id','=','users.id')->paginate(7);
         $advertisement = advertisement::paginate(2);
         $view = status::where('hot',0)->paginate(3);
         return view('page.index',compact('hotstatus','advertisement','view'));
