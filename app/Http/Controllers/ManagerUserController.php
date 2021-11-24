@@ -28,7 +28,7 @@ class ManagerUserController extends Controller
      $status->id_page=$req->type;
      $status->hot="0";
      $status->title=$req->title;
-     $status->description="test";
+     $status->description= $req->description;
        if ($req->hasFile('video')) {
             $image = $req->file('video');
             $namevideo = $image->getClientOriginalName();
@@ -36,7 +36,7 @@ class ManagerUserController extends Controller
               $status->video=$namevideo;
         }
      $status->save();
-       return view('user.AddStatus');
+       return redirect()->route('quanli');
    }
 
    public function ckeditor_image(Request $request){
@@ -61,6 +61,49 @@ class ManagerUserController extends Controller
         }
 
         }
+
+        // edit
+    public function getEditPage($id){
+        $status = status::where('id_status',$id)->first();
+    
+      return view('user.EditStatus', compact('status')); 
+    }
+
+    public function postEdit(Request $req, $id){
+      
+       $status = status::find($id)->first();
+        echo $id;
+        $status->user_id = Auth::user()->id;
+      if ($req->hasFile('titleImage')) {
+            $image = $req->file('titleImage');
+            $name = $image->getClientOriginalName();
+            $image->move('public/fontend/images/image',$name);
+            $status->image=$name;
+        }
+     
+     $status->id_page=$req->type;
+     $status->hot="0";
+     $status->title=$req->title;
+     $status->description= $req->description;
+       if ($req->hasFile('video')) {
+            $image = $req->file('video');
+            $namevideo = $image->getClientOriginalName();
+            $image->move('public/fontend/images/image',$namevideo);
+              $status->video=$namevideo;
+        }
+     $status->save();
+
+     return redirect()->route('quanli');
+    }
+
+
+
+        // xoa
+    public function getDeleteData($id){
+         status::where('id_status', $id)->delete();
+         return redirect()->route('quanli');
+    }
+  
 
 }
 

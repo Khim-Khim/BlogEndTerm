@@ -31,19 +31,12 @@
                             line-height: 1.6rem;cursor:pointer">{{$datas->title}}</a>
 
                     <div class="small m-t-xs">
-                       <p style=" display: -webkit-box;
-                            max-height: 3.2rem;
-                           -webkit-box-orient: vertical;
-                            overflow: hidden;
-                            text-overflow: ellipsis;
-                            white-space: normal;
-                            -webkit-line-clamp: 2;
-                            line-height: 1.6rem;cursor:pointer"> {{$datas->description}}</p>
+                       <p> <a href="{{route('chitiet',$datas->id_status)}}" >Click xem chi tiết</a></p>
                     </div>
                       <small class="text-muted" style="margin-left: -10px;">{{$datas->created_at}}</small>
                     <div class="m-t text-righ" style="margin-top: 15px; margin-bottom: -25px;">
-                        <a href="#" class="btn btn-xs btn-outline btn-primary">chỉnh sửa </a>
-                        <a href="#" class="btn btn-xs btn-outline btn-primary" style=" position: absolute; margin-left: 28px;">xóa </a>
+                        <a href="{{route('suabaiviet',$datas->id_status)}}" class="btn btn-xs btn-outline btn-primary">chỉnh sửa </a>
+                        <a href="{{route('xoabaiviet',$datas->id_status)}}" class="btn btn-xs btn-outline btn-primary" style=" position: absolute; margin-left: 28px;">xóa </a>
                     </div>
                 </div>
             </div>

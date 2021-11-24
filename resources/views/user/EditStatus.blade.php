@@ -1,7 +1,7 @@
 @extends('master')
  @section('content')
-
-<form action="{{route('upbaiviet')}}" method="post" enctype="multipart/form-data">
+<p>chỉnh sửa bài viết {{$status->title}}</p>
+<form action="{{route('editbaiviet',$status->id_status)}}" method="post" enctype="multipart/form-data">
     <input type="hidden" name="_token" value="{{csrf_token()}}">
 
     <div class="form-group">
@@ -34,7 +34,7 @@
   </div>
  
   <div class="form-block">
-        <button type="submit" class="btn btn-primary btn-lg ">up bài viết</button>
+        <button type="submit" class="btn btn-primary btn-lg ">sửa bài viết</button>
     </div>
 </form>
 

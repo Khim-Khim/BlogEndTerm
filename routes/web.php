@@ -91,4 +91,25 @@ Route::get('them-bai-viet',[
     'uses'=>'ManagerUserController@getAddPage'
 
 ]);
+Route::post('up-bai-viet',[
+    'as'=>'upbaiviet',
+    'uses'=>'ManagerUserController@postAddStatus'
+
+]);
 Route::post('/uploads-ckeditor','ManagerUserController@ckeditor_image');
+
+
+Route::get('sua-bai-viet/{id}',[
+    'as'=>'suabaiviet',
+    'uses'=>'ManagerUserController@getEditPage'
+
+]);
+Route::post('sua-bai-viet/{id}',[
+    'as'=>'editbaiviet',
+    'uses'=>'ManagerUserController@postEdit'
+]);
+Route::get('xoa-bai-viet/{id}',[
+    'as'=>'xoabaiviet',
+    'uses'=>'ManagerUserController@getDeleteData'
+
+]);
