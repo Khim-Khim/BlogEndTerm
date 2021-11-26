@@ -40,5 +40,8 @@ class User extends Authenticatable
     public function status(){
         return $this->belongsTo('App\status','user_id','id');
      }
+     public function comment(){
+        return $this->hasMany('App\comment','id_user','id');
+     }
 
 }

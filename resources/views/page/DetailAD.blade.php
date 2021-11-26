@@ -1,5 +1,5 @@
 @extends('master')
- @section('content')
+ @section('content')content
 
   <div class="page-title wb">
             <div class="container">
@@ -25,11 +25,11 @@
                             <div class="blog-title-area">
                                
 
-                                <h3>{{$detail->title}}</h3>
+                                <h3>{{$advertisement->title}}</h3>
 
                                 <div class="blog-meta big-meta">
-                                    <small><a href="garden-single.html" title="">{{$detail->created_at}}</a></small>
-                                    <small><a href="blog-author.html" title="">{{$detail->name}}</a></small>
+                                    <small><a href="garden-single.html" title="">{{$advertisement->created_at}}</a></small>
+                                    <small><a href="blog-author.html" title="">{{$advertisement->name}}</a></small>
                                     
                                 </div><!-- end meta -->
 
@@ -51,7 +51,7 @@
                             </div><!-- end media -->
 
                             <div class="blog-content">  
-                               {!! $detail->description !!}
+                               {!! $advertisement->description !!}
                             <div class="blog-title-area">
                                
 
@@ -126,47 +126,11 @@
 
                             <hr class="invis1">
 
-                            <div class="custombox clearfix">
-                                <h4 class="small-title">{{count($comment)}} Comments</h4>
-                                <div class="row">
-                                    <div class="col-lg-12">
-
-                                        <div class="comments-list">
-                                            @foreach ($comment as $cmt)
-                                            <div class="media">
-                                                <a class="media-left" href="#">
-                                                    <img src="upload/author.jpg" alt="" class="rounded-circle">
-                                                </a>
-                                                <div class="media-body">
-                                                    <h4 class="media-heading user_name">{{$cmt->name}}<small>{{$cmt->created_at}}</small></h4>
-                                                    <p>{{$cmt->comment}}</p>
-                                                    <a href="#" class="btn btn-primary btn-sm">Reply</a>
-                                                </div>
-                                            </div>
-                                           @endforeach
-                                        </div>
-                                    </div><!-- end col -->
-                                </div><!-- end row -->
-                            </div><!-- end custom-box -->
+                           
 
                             <hr class="invis1">
 
-                            <div class="custombox clearfix">
-                                <h4 class="small-title">Leave a Reply</h4>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        @if(Auth::check())
-                                        <form  action="{{route('comment',$detail->id_status)}}" method="post" class="form-wrapper" style="width: 1100px; margin-top:30px;">
-                                                @csrf
-                                            <textarea class="form-control" name="comment" placeholder="Your comment" style=" width:730px;"></textarea>
-                                            <button type="submit" class="btn btn-primary" style=" width:730px;">Bình luận</button>
-                                        </form>
-                                        @else
-                                        <h3 style="text-align: center; color:red;">Bạn cần đăng nhập để bình luận</h3>
-                                        @endif
-                                    </div>
-                                </div>
-                            </div>
+                          
                         </div><!-- end page-wrapper -->
                     </div><!-- end col -->
 
@@ -174,7 +138,6 @@
                 </div><!-- end row -->
             </div><!-- end container -->
         </section>
-  
 
 
- @endsection
+@endsection

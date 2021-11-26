@@ -18,7 +18,7 @@
                                     <div class="col-md-4">
                                         <div class="post-media">
                                             <a href="{{route('chitiet',$hot->id_status)}}" title="">
-                                          {{-- image --}}      <img src="fontend/images/image/{{$hot->image}}" alt="" class="img-fluid">
+                                          {{-- image --}}      <img src="fontend/images/image/{{$hot->image}}" style="width: 260px; height: 200px;" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
                                         </div><!-- end media -->
@@ -26,7 +26,7 @@
 
                                     <div class="blog-meta big-meta col-md-8">
                                        <span class="bg-aqua"><a href="garden-category.html" title="">HOT</a></span>
-                    {{-- title --}}      <h4><a href="garden-single.html" title="">{{$hot->title}}</a></h4>
+                    {{-- title --}}      <h4><a href="{{route('chitiet',$hot->id_status)}}" >{{$hot->title}}</a></h4>
  {{-- description --}}                               <p>{{$hot->description}}</p>
                                         
                         {{-- dayupdate --}}            <small><a href="garden-single.html" title="">{{$hot->created_at}}</a></small>
@@ -34,7 +34,7 @@
                          {{--  name user --}}  
                                   
 
-                                     <small><a href="#" title=""></a></small>
+                                     <small><a href="#" title="">{{$hot->name}}</a></small>
                                     
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
@@ -116,7 +116,7 @@
                                 <div class="blog-list-widget">
                                     <div class="list-group">
                                         @foreach($view as $views)
-                                        <a href="garden-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <a href="{{route('chitiet',$views->id_status)}}" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
                                                 <img src="fontend/images/image/{{$views->image}}" alt="" style="width: 40px; height:40px;" class="img-fluid float-left">
                                                 <h5 class="mb-1">{{$views->title}}</h5>

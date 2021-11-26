@@ -75,6 +75,16 @@ Route::get('chi-tiet/{id}',[
     'uses'=>'DetailController@getDetail'
 
 ]);
+Route::get('chi-tiet-QC/{id}',[
+    'as'=>'chitietAD',
+    'uses'=>'DetailController@getDetailAD'
+
+]);
+Route::get('Tim-kiem',[
+    'as'=>'Search',
+    'uses'=>'SearchController@getSearch'
+
+]);
 //user
 Route::get('up-bai',[
     'as'=>'trangupbai',
@@ -111,5 +121,18 @@ Route::post('sua-bai-viet/{id}',[
 Route::get('xoa-bai-viet/{id}',[
     'as'=>'xoabaiviet',
     'uses'=>'ManagerUserController@getDeleteData'
+
+]);
+
+Route::post('comment/{id}',[
+    'as'=> 'comment',
+    'uses'=>'CommentController@postComment'
+
+]);
+
+// admin
+Route::get('admin',[
+    'as'=>'admin',
+    'uses'=>'AdminController@getAdminPage'
 
 ]);

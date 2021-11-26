@@ -11,4 +11,7 @@ class status extends Model
        public function user(){
         return $this->hasMany('App\User','user_id','id');
      }
+      public function comment(){
+            return $this->hasMany('App\comments','id_status', 'id');
+      }
 }

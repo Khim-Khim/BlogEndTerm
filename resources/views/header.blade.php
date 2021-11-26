@@ -3,8 +3,9 @@
         <div class="collapse top-search" id="collapseExample">
             <div class="card card-block">
                 <div class="newsletter-widget text-center">
-                    <form class="form-inline">
-                        <input type="text" class="form-control" placeholder="What you are looking for?">
+                    {{-- search form --}}
+                    <form class="form-inline" method="get" action="{{route('Search')}}">
+                        <input type="text" name="search" class="form-control" placeholder="What you are looking for?">
                         <button type="submit" class="btn btn-primary" style=" width:50px; height: 50px; border: 0px none"><i class="fa fa-search"></i></button>
                     </form>
                 </div><!-- end newsletter -->
@@ -22,8 +23,11 @@
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Instagram"><i class="fa fa-instagram"></i></a>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
                             @if(Auth::check())
-                                <a href="#"style="margin-left: 40px;">Hi, &nbsp;{{Auth::user()->name}}</a>
-                                 <a href="{{route('quanli')}}"style="margin-left: 40px;">bài viết cá nhân</a>
+                                <a href="#"style="margin-right: 20px; margin-left:12px;">Hi, &nbsp;{{Auth::user()->name}}</a>
+                                 <a href="{{route('quanli')}}"style="margin-right: 20px;">bài viết cá nhân</a>
+                                 @if(Auth::user()->admin=="1")                         
+                                <a href="{{route('admin')}}">Quản lí</a>
+                            @endif
                                 <a href="{{route('dangxuat')}}" style="margin-left: 20px;">Đăng xuất</a>
                             @else
                              <a href="{{route('dangnhap')}}" style="margin-left: 40px;"><i style="font-size: 16px;">Đăng nhập</i></a>

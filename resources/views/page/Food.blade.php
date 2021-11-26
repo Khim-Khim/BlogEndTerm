@@ -31,7 +31,7 @@
                                     <div class="col-md-4">
                                         <div class="post-media">
                                             <a href="{{route('chitiet',$foods->id_status)}}" title="">
-                                                <img src="fontend/images/image/{{$foods->image}}" alt="" class="img-fluid">
+                                                <img src="fontend/images/image/{{$foods->image}}" style="width: 260px; height: 200px;" class="img-fluid">
                                                 <div class="hovereffect"></div>
                                             </a>
                                         </div><!-- end media -->
@@ -43,7 +43,7 @@
                                         <p>{{$foods->description}}</p>
                                         
                                         <small><a href="garden-single.html" title="">{{$foods->created_at}}</a></small>
-                                        <small><a href="#" title=""></a>{{-- {{$foods->name}} --}}</small>
+                                        <small><a href="#" title=""></a> {{$foods->name}}</small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
 

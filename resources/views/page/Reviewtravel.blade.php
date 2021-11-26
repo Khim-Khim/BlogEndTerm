@@ -31,8 +31,8 @@
                                     <div class="col-md-4">
                                         <div class="post-media">
                                              <a href="{{route('chitiet',$reviews->id_status)}}" title="">
-                                                <img src="fontend/images/image/{{$reviews->image}}" alt="" class="img-fluid">
-                                                <div class="hovereffect"></div>
+                                                <img src="fontend/images/image/{{$reviews->image}}" style="width: 260px; height: 200px;" class="img-fluid">
+                                                <div class="hovereffect" ></div>
                                             </a>
                                         </div><!-- end media -->
                                     </div><!-- end col -->
@@ -40,10 +40,10 @@
                                     <div class="blog-meta big-meta col-md-8">
                                        
                                         <h4><a href="{{route('chitiet',$reviews->id)}}" title="">{{$reviews->title}}</a></h4>
-                                        <p>{{$reviews->description}}</p>
+                                        <p>{!!$reviews->description!!}</p>
                                         
                                         <small><a href="garden-single.html" title="">{{$reviews->created_at}}</a></small>
-                                        <small><a href="#" title=""></a>{{-- {{$foods->name}} --}}</small>
+                                        <small><a href="#" title=""></a>{{$reviews->name}}</small>
                                     </div><!-- end meta -->
                                 </div><!-- end blog-box -->
 
@@ -74,7 +74,7 @@
                                 <div class="blog-list-widget">
                                     <div class="list-group">
                                         @foreach ($advertisement as $ad)
-                                        <a href="garden-single.html" class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <a href="{{route('chitietAD',$ad->id)}}" class="list-group-item list-group-item-action flex-column align-items-start">
                                             <div class="w-100 justify-content-between">
                                                 <img src="upload/garden_sq_09.jpg" alt="" class="img-fluid float-left">
                                                 <h5 class="mb-1">{{$ad->title}}</h5>

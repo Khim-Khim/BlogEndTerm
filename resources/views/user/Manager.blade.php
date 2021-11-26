@@ -47,25 +47,22 @@
 </div>
 </div>
 <div class="dmtop">Scroll to Top</div>
-<button onclick="topFunction()" id="myBtn" title="Go to top"><a href="{{route('thembaiviet')}}" title="">Thêm bài viết</a></button>
-
-<style>
+<button  id="myBtn" title="Go to top">THÊM BÀI</button>
+    <style>
 
 #myBtn {
-    width: 60px;
-    height: 60px;
-    display: none;
+    width: 70px;
     position: fixed;
-    bottom: 25px;
+    bottom: 10px;
+    left: 43px;
     z-index: 99;
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: ;
+    background-color: #74a044 !important;
     color: white;
     cursor: pointer;
-    padding: 4px;
-    margin-left: 20px;
+    padding: 15px;
     border-radius: 4px;
 }
 
@@ -73,7 +70,6 @@
   background-color: #555;
 }
 </style>
-
 
 <script>
 // When the user scrolls down 20px from the top of the document, show the button
