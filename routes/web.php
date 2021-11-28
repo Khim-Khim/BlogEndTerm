@@ -129,6 +129,26 @@ Route::post('comment/{id}',[
     'uses'=>'CommentController@postComment'
 
 ]);
+Route::get('follow',[
+    'as'=> 'follow',
+    'uses'=>'FollowController@getFollow'
+
+]);
+Route::get('AddFollow/{id}',[
+    'as'=> 'addfollow',
+    'uses'=>'FollowController@getAddFollow'
+
+]);
+Route::get('Delete-Follow/{id}',[
+    'as'=> 'deletefollow',
+    'uses'=>'FollowController@getDeletefollow'
+
+]);
+Route::get('check/{id}',[
+    'as'=> 'check',
+    'uses'=>'FollowController@getCheck'
+
+]);
 
 // admin
 Route::get('admin',[

@@ -37,7 +37,13 @@
                                     <ul class="list-inline">
                                         <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
                                         <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
-                                        <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                                        @if(Auth::check())
+                                       @if($check =="1")
+                                      <li><button type="button" class="btn btn-primary" style=" width: 150px; height: 50px;"><a href="{{route('deletefollow',$detail->id_status)}}" style="color:white;"> bỏ theo dõi</a></button></li>
+                                        @else
+                                        <li><button type="button" class="btn btn-primary" style=" width: 150px; height: 50px;"><a href="{{route('addfollow',$detail->id_status)}}" style="color:white;">theo dõi</a></button></li>
+                                        @endif
+                                        @endif
                                     </ul>
                                 </div><!-- end post-sharing -->
                             </div><!-- end title -->
@@ -59,8 +65,9 @@
                                     <ul class="list-inline">
                                         <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
                                         <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
-                                        <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
-                                         <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+                                        @if(Auth::check())
+                                        <li><button type="button" class="btn btn-primary" style=" width: 150px; height: 50px;"><a href="{{route('addfollow',$detail->id_status)}}" style="color:white;">theo dõi</a></button></li>
+                                        @endif
                                     </ul>
                                 </div><!-- end post-sharing -->
                             </div><!-- end title -->

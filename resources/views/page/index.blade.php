@@ -27,7 +27,7 @@
                                     <div class="blog-meta big-meta col-md-8">
                                        <span class="bg-aqua"><a href="garden-category.html" title="">HOT</a></span>
                     {{-- title --}}      <h4><a href="{{route('chitiet',$hot->id_status)}}" >{{$hot->title}}</a></h4>
- {{-- description --}}                               <p>{{$hot->description}}</p>
+ {{-- description --}}                               <p>{!!$hot->description!!}</p>
                                         
                         {{-- dayupdate --}}            <small><a href="garden-single.html" title="">{{$hot->created_at}}</a></small>
                         

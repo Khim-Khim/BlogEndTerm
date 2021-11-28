@@ -87,7 +87,7 @@
                             </li>
                              @if(Auth::check())
                             <li class="nav-item">
-                                <a class="nav-link color-green-hover" href="{{route('lienhe')}}">bạn đã theo dõi</a>
+                                <a class="nav-link color-green-hover" href="{{route('follow')}}">bạn đã theo dõi</a>
                             </li>
                             @endif  
                             <li class="nav-item">

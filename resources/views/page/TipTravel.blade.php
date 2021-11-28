@@ -39,8 +39,8 @@
 
                                     <div class="blog-meta big-meta col-md-8">
                                        
-                                        <h4><a href="{{route('chitiet',$tr->id)}}" title="">{{$tr->title}}</a></h4>
-                                        <p>{{$tr->description}}</p>
+                                        <h4><a href="{{route('chitiet',$tr->id_status)}}" title="">{{$tr->title}}</a></h4>
+                                        <p>{!!$tr->description!!}</p>
                                         
                                         <small><a href="garden-single.html" title="">{{$tr->created_at}}</a></small>
                                         <small><a href="#" title=""></a>{{$tr->name}}</small>

@@ -39,7 +39,7 @@
 
                                     <div class="blog-meta big-meta col-md-8">
                                        
-                                        <h4><a href="{{route('chitiet',$reviews->id)}}" title="">{{$reviews->title}}</a></h4>
+                                        <h4><a href="{{route('chitiet',$reviews->id_status)}}" title="">{{$reviews->title}}</a></h4>
                                         <p>{!!$reviews->description!!}</p>
                                         
                                         <small><a href="garden-single.html" title="">{{$reviews->created_at}}</a></small>

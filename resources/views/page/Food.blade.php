@@ -39,8 +39,8 @@
 
                                     <div class="blog-meta big-meta col-md-8">
                                         
-                                        <h4><a href="garden-single.html" title="">{{$foods->title}}</a></h4>
-                                        <p>{{$foods->description}}</p>
+                                        <h4><a href="{{route('chitiet',$foods->id_status)}}" title="">{{$foods->title}}</a></h4>
+                                        <p>{!!$foods->description!!}</p>
                                         
                                         <small><a href="garden-single.html" title="">{{$foods->created_at}}</a></small>
                                         <small><a href="#" title=""></a> {{$foods->name}}</small>

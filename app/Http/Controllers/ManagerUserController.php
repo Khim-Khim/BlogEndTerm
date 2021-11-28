@@ -72,7 +72,7 @@ class ManagerUserController extends Controller
     public function postEdit(Request $req, $id){
       
        $status = status::find($id)->first();
-        echo $id;
+      
         $status->user_id = Auth::user()->id;
       if ($req->hasFile('titleImage')) {
             $image = $req->file('titleImage');
