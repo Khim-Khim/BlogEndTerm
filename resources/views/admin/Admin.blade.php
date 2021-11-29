@@ -3,6 +3,13 @@
 
 <div class="container">
     <h1 style="text-align:center;">Quản lí bài viết trong blog</h1>
+{{-- test --}}
+<ul class="list-group" style=" width: 230px; margin-left: 430px; text-align:center;">
+  <li class="list-group-item active">Quản lí bài viết </li>
+  <li class="list-group-item"><a href="{{route('duyetbai')}}" title="">Duyệt bài</a></li>
+ 
+</ul>
+{{-- end tets --}}
     <table class="table table-bordered">
   <thead>
     <tr>

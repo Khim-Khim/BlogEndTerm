@@ -8,9 +8,8 @@ use Auth;
 class ManagerUserController extends Controller
 {
     public function getPage(){
-        
         $data = status::where('user_id', Auth::user()->id)->get();
-       return view('user.Manager', compact('data'));
+        return view('user.Manager', compact('data'));
     }
     public function getAddPage(){
         return view('user.AddStatus');
@@ -35,6 +34,7 @@ class ManagerUserController extends Controller
             $image->move('public/fontend/images/image',$namevideo);
               $status->video=$namevideo;
         }
+        $status->waiting="0";
      $status->save();
        return redirect()->route('quanli');
    }

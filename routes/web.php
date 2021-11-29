@@ -167,6 +167,15 @@ Route::get('xoa-bai/{id}',[
     'uses'=>'AdminController@getdeletestatus'
 
 ]);
+Route::get('duyet-bai',[
+    'as'=>'duyetbai',
+    'uses'=>'AdminController@getcensorship'
 
+]);
+Route::get('accept/{id}',[
+    'as'=>'accept',
+    'uses'=>'AdminController@getaccept'
+
+]);
 
 //endadmin

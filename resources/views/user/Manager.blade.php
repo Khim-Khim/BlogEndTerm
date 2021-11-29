@@ -32,6 +32,7 @@
 
                     <div class="small m-t-xs">
                        <p> <a href="{{route('chitiet',$datas->id_status)}}" >Click xem chi tiết</a></p>
+                        <p>trạng thái: @if($datas->waiting=="1") Đã duyệt bài@else đang chờ duyệt @endif</p>
                     </div>
                       <small class="text-muted" style="margin-left: -10px;">{{$datas->created_at}}</small>
                     <div class="m-t text-righ" style="margin-top: 15px; margin-bottom: -25px;">
@@ -47,7 +48,7 @@
 </div>
 </div>
 <div class="dmtop">Scroll to Top</div>
-<button  id="myBtn" title="Go to top">THÊM BÀI</button>
+<button  id="myBtn" title="Go to top"><a href="{{route('thembaiviet')}}" >Thêm bài</a></button>
     <style>
 
 #myBtn {

@@ -7,7 +7,7 @@ use App\status;
 class AdminController extends Controller
 {
     public function getAdminPage() {
-        $getStatus = status::all();
+        $getStatus = status::where('waiting', 1)->get();
         
          return view('admin.Admin',compact('getStatus'));
     }
@@ -26,7 +26,15 @@ class AdminController extends Controller
         status::where('id_status', $id)->delete();
         return redirect()->back();
     }
-    public function getApproveStatus(){
-
+    public function getcensorship(){
+        $duyet = status::where('waiting',0)->get();
+        return view('admin.censorship',compact('duyet'));
     }
+    public function getaccept($id){
+        $accept = status::where('id_status', $id)->first();
+        $accept->waiting = "1";
+        $accept->save();
+        return redirect()->back();
+    }
+   
 }
