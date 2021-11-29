@@ -149,6 +149,7 @@ Route::get('check/{id}',[
     'uses'=>'FollowController@getCheck'
 
 ]);
+//end user
 
 // admin
 Route::get('admin',[
@@ -156,3 +157,16 @@ Route::get('admin',[
     'uses'=>'AdminController@getAdminPage'
 
 ]);
+Route::get('up-tieu-diem/{id}',[
+    'as'=>'hotstatus',
+    'uses'=>'AdminController@gethotstatus'
+
+]);
+Route::get('xoa-bai/{id}',[
+    'as'=>'deletestatus',
+    'uses'=>'AdminController@getdeletestatus'
+
+]);
+
+
+//endadmin
